@@ -15,7 +15,7 @@ jobs:
         python-version: 3.8
     - name: Install poetry and dependencies
       run: |
-        curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+        curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | POETRY_PREVIEW=1 python
         source $HOME/.poetry/env
         poetry install -v
     - name: Run test
